@@ -1,0 +1,26 @@
+2021-05-25T06:47:56+00:00 CRITICAL syntax error, unexpected end of file in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 156
+
+2021-05-25T06:48:07+00:00 CRITICAL syntax error, unexpected end of file in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 156
+
+2021-05-25T06:48:08+00:00 CRITICAL syntax error, unexpected end of file in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 156
+
+2021-05-25T07:07:24+00:00 CRITICAL syntax error, unexpected '$_COOKIE' (T_VARIABLE), expecting ',' or ')' in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 126
+
+2021-05-25T07:22:54+00:00 CRITICAL syntax error, unexpected ')' in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 118
+
+2021-05-25T07:22:55+00:00 CRITICAL syntax error, unexpected ')' in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 118
+
+2021-05-25T08:21:55+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:80
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): woocommerce_remove_product_from_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 80
+
+2021-05-25T11:30:28+00:00 CRITICAL Cannot redeclare woocommerce_remove_product_from_cart() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:79) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 113
+

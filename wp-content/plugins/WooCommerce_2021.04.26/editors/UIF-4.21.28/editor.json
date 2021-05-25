@@ -1,0 +1,46 @@
+{
+  "title": "UI-Framework v.4.21.28",
+  "name": "UI-Framework-4.21.28",
+  "element": "au-wizard",
+  "version": "4.21.28",
+  "entry": "editor.js",
+  "imports": [
+    {
+      "src": "themes/au-default-theme.html",
+      "check": "true"
+    },
+    {
+      "src": "imports/es5/es6-shim.js",
+      "check": "!isSupportingEs8"
+    },
+    {
+      "src": "imports/es8/es6-shim.js",
+      "check": "isSupportingEs8"
+    },
+    {
+      "src": "imports/es5/webcomponents/webcomponents-loader.js",
+      "check": "!isSupportingEs8"
+    },
+    {
+      "src": "imports/es8/webcomponents/webcomponents-loader.js",
+      "check": "isSupportingEs8"
+    },
+    {
+      "src": "imports/es5/au.editor.js",
+      "check": "!isSupportingEs8"
+    },
+    {
+      "src": "imports/es8/au.editor.js",
+      "check": "isSupportingEs8"
+    },
+    {
+      "src": "imports/es5/es8-shim.js",
+      "check": "!isSupportingEs8"
+    },
+    {
+      "src": "imports/es8/es8-shim.js",
+      "check": "isSupportingEs8"
+    }
+  ],
+  "defaultConfig": "default.json"
+}

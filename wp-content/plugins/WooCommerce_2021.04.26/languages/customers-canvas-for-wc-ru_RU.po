@@ -1,0 +1,426 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Blank WordPress Pot v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2018-09-24 02:53+0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Your Team <translations@example.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: .git\n"
+"X-Poedit-SearchPathExcluded-1: .vscode\n"
+"X-Poedit-SearchPathExcluded-2: assets\n"
+"X-Poedit-SearchPathExcluded-3: languages\n"
+
+#: classes/controllers/cc-wc-editors-controller.php:24
+#: classes/controllers/cc-wc-editors-controller.php:48
+#: classes/controllers/cc-wc-editors-controller.php:77
+#: classes/controllers/cc-wc-editors-controller.php:135
+msgid "Editor's folder wasn't specified"
+msgstr "Папка редактора не указана"
+
+#: classes/controllers/cc-wc-editors-controller.php:28
+#: classes/controllers/cc-wc-editors-controller.php:52
+#: classes/controllers/cc-wc-editors-controller.php:81
+msgid "Configuration wasn't specified"
+msgstr "Конфигурация не указана"
+
+#: classes/controllers/cc-wc-editors-controller.php:33
+#: classes/controllers/cc-wc-editors-controller.php:61
+#: classes/controllers/cc-wc-editors-controller.php:87
+msgid "Failed to load editor."
+msgstr "Не удалось загрузить редактор."
+
+#: classes/controllers/cc-wc-editors-controller.php:40
+msgid "Clone failed."
+msgstr "Не удалось клонировать."
+
+#: classes/controllers/cc-wc-editors-controller.php:56
+msgid "Content wasn't provided"
+msgstr "Пустая конфигурация"
+
+#: classes/controllers/cc-wc-editors-controller.php:67
+msgid "Update failed"
+msgstr "Обновление не удалось"
+
+#: classes/controllers/cc-wc-editors-controller.php:93
+msgid "Failed to load config."
+msgstr "Не удалось загрузить файл конфигурации."
+
+#: classes/controllers/cc-wc-editors-controller.php:108
+msgid "Wrong file format only .zip are accepted"
+msgstr "Недопустимый формат файла для загрузки. Принимаются только ZIP файлы"
+
+#: classes/controllers/cc-wc-editors-controller.php:131
+msgid "Wrong file format only .json are accepted"
+msgstr "Недопустимый формат файла для загрузки. Принимаются только JSON файлы"
+
+#: classes/controllers/cc-wc-editors-controller.php:165
+#: classes/controllers/cc-wc-editors-controller.php:195
+msgid "Editor's folder wasn't found"
+msgstr "Папка редактора не найдена"
+
+#: classes/controllers/cc-wc-editors-controller.php:168
+#: classes/controllers/cc-wc-editors-controller.php:176
+msgid "Editor's folder wasn't specified."
+msgstr "Папка редактора не указана."
+
+#: classes/controllers/cc-wc-editors-controller.php:180
+msgid "Config name wasn't specified."
+msgstr "Имя конфигурации не указано."
+
+#: classes/controllers/cc-wc-editors-controller.php:188
+msgid "Error during config removal."
+msgstr "Ошибка во время удаления конфигурации."
+
+#: classes/controllers/cc-wc-editors-controller.php:192
+msgid "Config file wasn't found"
+msgstr "Файл конфигурации не найден"
+
+#: classes/controllers/cc-wc-orders-controller.php:33
+msgid "Download design"
+msgstr ""
+
+#: classes/controllers/cc-wc-orders-controller.php:40
+msgid "Export PDF designs"
+msgstr ""
+
+#: classes/controllers/cc-wc-orders-controller.php:152
+#, fuzzy
+#| msgid "Update failed"
+msgid "Export failed"
+msgstr "Обновление не удалось"
+
+#: classes/controllers/cc-wc-orders-controller.php:159
+#, php-format
+msgid "Exported %s Order design."
+msgstr ""
+
+#: classes/controllers/cc-wc-orders-controller.php:160
+#, php-format
+msgid "Exported %s Orders designs."
+msgstr ""
+
+#: classes/controllers/cc-wc-personalizable-product-controller.php:222
+#: classes/models/cc-wc-personalizable-product.php:25
+msgid "Personalize"
+msgstr "Персонализировать"
+
+#: classes/controllers/cc-wc-personalizable-product-controller.php:237
+msgid "Personalizable Product"
+msgstr "Персонализируемый продукт"
+
+#: classes/controllers/cc-wc-settings-controller.php:16
+#: templates/settings.php:3
+msgid "Settings"
+msgstr "Настройки"
+
+#: classes/controllers/cc-wc-settings-controller.php:16
+msgid "Personalization Plugin"
+msgstr "Плагин Персонализации"
+
+#: classes/controllers/cc-wc-settings-controller.php:22
+msgid "You do not have sufficient permissions to access this page."
+msgstr "У вас недостаточно прав для доступа к этой странице."
+
+#: classes/controllers/cc-wc-settings-controller.php:46
+msgid "Url wasn't specified"
+msgstr "Не указан URL-адрес"
+
+#: classes/controllers/cc-wc-settings-controller.php:50
+msgid "Invalid url specified"
+msgstr "Указан неверный URL-адрес"
+
+#: classes/controllers/cc-wc-settings-controller.php:56
+#, fuzzy
+#| msgid "Invalid url specified"
+msgid "Invalid export path specified"
+msgstr "Указан неверный URL-адрес"
+
+#: classes/models/editor-uploader.php:16
+msgid "Editor's folder wasn't found."
+msgstr "Папка редактора не найдена."
+
+#: classes/models/editor-uploader.php:21
+msgid "Error during file move."
+msgstr "Ошибка при перемещении файла."
+
+#: classes/models/editor-uploader.php:26
+msgid "Invalid config file."
+msgstr "Неправильный файл конфигурации."
+
+#: classes/models/editor-uploader.php:41
+msgid "Error during zip extraction."
+msgstr "Ошибка во время распаковки zip архива."
+
+#: classes/models/editor-uploader.php:49
+msgid "Error during editor initialization. Meta file is absent or corrupted."
+msgstr ""
+"Ошибка во время инициализации редактора. Мета файл отсутствует или повреждён."
+
+#: classes/models/editor-uploader.php:58
+msgid "Failed to create new folder."
+msgstr "Не удалось создать новую папку."
+
+#: templates/product/product-editors.php:6
+msgid "Please, save the product before setting up personalization."
+msgstr ""
+
+#: templates/product/product-editors.php:21
+msgid "Click for instructions"
+msgstr "Нажмите для инструкций"
+
+#: templates/product/product-editors.php:27
+msgid "To associate this product with Aurigma Personalization Plugin:"
+msgstr ""
+"Для того, чтобы связать этот продукт с плагином персонализации от Aurigma:"
+
+#: templates/product/product-editors.php:29
+msgid "Choose an Editor from a list"
+msgstr "Выберите редактор из списка"
+
+#: templates/product/product-editors.php:30
+msgid "Select its config (a set of predefined parameters)"
+msgstr "Выберите его конфигурацию (набор преопределенных параметров)"
+
+#: templates/product/product-editors.php:31
+msgid "Specify variable attributes if necessary"
+msgstr "При необходимости уточните значения переменных атрибутов"
+
+#: templates/product/product-editors.php:33
+msgid "Then click Apply to generate all necessary Specification Attributes"
+msgstr ""
+"Потом нажмите \"Применить\", чтобы сгенерировать все необходимые атрибуты "
+"спецификации"
+
+#: templates/product/product-editors.php:34
+msgid ""
+"To unlink the product from the Aurigma Personalization Plugin, click Unlink "
+"button - note, it will delete Aurigma's Specification Attributes from this "
+"product."
+msgstr ""
+"Для того, чтобы отключить продукт от плагина персонализации, нажмите "
+"\"Отключить\" - примечание: это удалит атрибуты спецификации плагина у этого "
+"продукта."
+
+#: templates/product/product-editors.php:48
+msgid "Aurigma Editor"
+msgstr "Редактор Aurigma"
+
+#: templates/product/product-editors.php:60
+msgid "Editor's Config"
+msgstr "Конфигурация редактора"
+
+#: templates/product/product-editors.php:75
+msgid "Unlink"
+msgstr "Отключить"
+
+#: templates/product/product-editors.php:76
+msgid "Apply"
+msgstr "Применить"
+
+#: templates/settings.php:2
+msgid "Editors"
+msgstr "Редакторы"
+
+#: templates/settings.php:23
+msgid "Save config"
+msgstr "Сохранить конфигурацию"
+
+#: templates/settings.php:30 templates/settings.php:39
+msgid "Upload Editor"
+msgstr "Загрузить редактор"
+
+#: templates/settings.php:36
+msgid "No editors are installed yet."
+msgstr "Нет установленных редакторов."
+
+#: templates/settings.php:37 templates/settings.php:67
+msgid ""
+"Upload a zip file with an editor or put it directly to the <code>Editors</"
+"code> folder of a plugin."
+msgstr ""
+"Загрузить zip архив с редактором или распакуйте его напрямую в папку "
+"<code>Редакторов</code> в папке плагина."
+
+#: templates/settings.php:44
+msgid "Title"
+msgstr "Название"
+
+#: templates/settings.php:45 templates/settings.php:74
+msgid "Action"
+msgstr "Действие"
+
+#: templates/settings.php:52 templates/settings.php:87
+msgid "version"
+msgstr "версия"
+
+#: templates/settings.php:58 templates/settings.php:97
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/settings.php:66
+msgid "No configs are installed yet."
+msgstr "Нет установленных конфигураций."
+
+#: templates/settings.php:68 templates/settings.php:80
+msgid "Upload Config"
+msgstr "Загрузить конфигурацию"
+
+#: templates/settings.php:73
+msgid "Config"
+msgstr "Конфигурация"
+
+#: templates/settings.php:94
+msgid "Edit"
+msgstr "Редактировать"
+
+#: templates/settings.php:95
+msgid "Clone"
+msgstr "Клонировать"
+
+#: templates/settings.php:117
+msgid "Are you sure you want to delete that editor?"
+msgstr "Вы уверены, что хотите удалить этот редактор?"
+
+#: templates/settings.php:199
+msgid "Error:"
+msgstr "Ошибка:"
+
+#: templates/settings.php:254
+msgid "Are you sure you want to delete that config?"
+msgstr "Вы уверены, что хотите удалить эту конфигурацию?"
+
+#: templates/settings.php:409
+msgid "Design Editor URL"
+msgstr "Design Editor URL"
+
+#: templates/settings.php:345
+#, fuzzy
+#| msgid "Design Editor URL"
+msgid "Design Editor API Key"
+msgstr "Design Editor URL"
+
+#: templates/settings.php:355
+msgid "Keyword"
+msgstr ""
+
+#: templates/settings.php:356
+msgid "Description"
+msgstr ""
+
+#: templates/settings.php:362
+msgid "order id"
+msgstr ""
+
+#: templates/settings.php:380
+msgid "product id"
+msgstr ""
+
+#: templates/settings.php:384
+msgid "product name"
+msgstr ""
+
+#: templates/settings.php:388
+msgid "product sku"
+msgstr ""
+
+#: templates/settings.php:406
+msgid "quantity"
+msgstr ""
+
+#: templates/settings.php:420
+msgid "File name template the exported PDF files (without extension)"
+msgstr ""
+
+#: templates/settings.php:428 templates/settings.php:432
+msgid "Add 'Get PDF designs from orders' button to Admin Order List view"
+msgstr ""
+
+#: templates/settings.php:440
+msgid "Path to the folder for the exported PDF files"
+msgstr ""
+
+#: templates/settings.php:452
+msgid "Save"
+msgstr "Сохранить"
+
+#: templates/settings.php:455
+msgid "Update local fonts"
+msgstr "Обновить локальные шрифты"
+
+#: templates/settings.php:480
+#, fuzzy
+#| msgid "Update failed"
+msgid "Save failed!"
+msgstr "Обновление не удалось"
+
+#: templates/settings.php:489 templates/settings.php:504
+#, fuzzy
+#| msgid "Update failed"
+msgid "Update failed!"
+msgstr "Обновление не удалось"
+
+#: templates/settings.php:489
+msgid "Api key is required!"
+msgstr ""
+
+#: templates/settings.php:501
+msgid "Local fonts were updated successfully!"
+msgstr ""
+
+#: templates/settings.php:513
+msgid "Value is empty!"
+msgstr "Значение пусто!"
+
+#: templates/settings.php:524 templates/settings.php:562
+msgid "Invalid URL!"
+msgstr "Указан неверный URL-адрес!"
+
+#: templates/settings.php:546
+msgid "Save successful!"
+msgstr "Сохранение успешно!"
+
+#: templates/settings.php:549
+msgid "Server error!"
+msgstr "Серверная ошибка!"
+
+#: utils.php:31
+msgid "Error: couldn't open export folder"
+msgstr ""
+
+#: utils.php:34
+msgid "Error: couldn't open order item url"
+msgstr ""
+
+#: utils.php:50 utils.php:65
+msgid "There was a problem with your upload."
+msgstr "Произошла ошибка во время загрузки."
+
+#: utils.php:53 utils.php:56
+msgid "The file you are trying to upload is too big."
+msgstr "Слишком большой файл."
+
+#: utils.php:59
+msgid "The file you are trying upload was only partially uploaded."
+msgstr "Файл был только частично загружен."
+
+#: utils.php:62
+msgid "You must select a file for upload."
+msgstr "Вы должны выбрать файл для загрузки."

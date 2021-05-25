@@ -1,0 +1,35 @@
+2021-05-19T07:08:43+00:00 CRITICAL Cannot redeclare misha_select_field() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-shipping.php:139) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-shipping.php on line 158
+
+2021-05-19T07:08:54+00:00 CRITICAL Cannot redeclare misha_select_field() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-shipping.php:139) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-shipping.php on line 158
+
+2021-05-19T07:14:33+00:00 CRITICAL Cannot redeclare misha_select_field() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-shipping.php:139) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-shipping.php on line 158
+
+2021-05-19T09:06:54+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:06:55+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:07:01+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:07:15+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:07:16+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:08:12+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:08:41+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:08:42+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T09:08:56+00:00 CRITICAL Cannot redeclare acme_change_some_text() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:69) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 88
+
+2021-05-19T10:30:53+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:84
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): aaaaaaaaaaaaaaaaaaaaaa('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\content-single-product.php(72): do_action('woocommerce_aft...')
+#4 W:\domains\dotandgrain\wp-includes\template.php(732): require('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('W:\\domains\\dota...', false)
+#6 W:\domains\dotandgrain\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(598): wc_get_template_part('content', 'single-product')
+#7 W:\domains\dotandgrain\wp-includes\shortcodes.php(343): WC_Shortcodes::product_pag in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 84
+

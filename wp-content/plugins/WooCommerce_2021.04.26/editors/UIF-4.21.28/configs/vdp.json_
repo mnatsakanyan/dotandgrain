@@ -1,0 +1,852 @@
+{
+    "showSteps": true,
+    "language": "en",
+    "previewSize": 750,
+    "vars": {
+      "publicFoldersUrl": "/api/ImagePicker/GetPublicCategories?rootfolder=",
+      "folderFilesUrl": "/api/ImagePicker/GetPublicFiles?svgaction=vector&id=",
+      "fileThumbnailUrl": "/api/ImagePicker/GetGalleryPreview?width=800&maxheight=800&pdfaction=vector&psdaction=merged&svgaction=vector&id=",
+      "backgroundFolder": "demos/id-card/vdp/backgrounds",
+      "placeholders": "{{ $['table'].getSelectedRowData().filter(x => !!x.value && x.type === 'InString').reduce((acc,cur)=> { acc[cur.name]=cur.value; return acc; },{}) }}",
+      "itemsData": {
+        "{{#flatten}}": {
+          "something": {
+            "{{#each $['table'].getSelectedRowData().filter(x => !!x.value) as item }}": {
+              "{{item.name}}": {
+                "{{ #if (item.type === 'Text') }}": {
+                  "text": "{{item.value}}"
+                },
+                "{{ #elseif (item.type === 'InString') }}": {
+                  "text": "{{item.value}}"
+                },
+                "{{ #elseif (item.type === 'BarcodePlaceholder' || item.type === 'ImagePlaceholder')}}": {
+                  "barcodeData": {
+                    "{{ #if (item.barcodeSubType === 'Url') }}": {
+                      "url": "{{item.value}}"
+                    },
+                    "{{ #elseif (item.barcodeSubType === 'Phone') }}": {
+                      "phone": "{{item.value}}"
+                    },
+                    "{{ #else }}": {
+                      "barcodeValue": "{{item.value}}"
+                    }
+                  }
+                },
+                "{{ #elseif (item.type === 'ImagePlaceholder')}}": {
+                  "image": "{{item.value}}"
+                }
+              }
+            }
+          },
+          "placeholders": {
+            "{{#flatten}}": {
+              "something": {
+                "{{#each $['table'].getSelectedRowData().filter(x => !!x.value && x.type === 'InString') as item }}": {
+                  "{{item.name}}": "{{item.value}}"
+                }
+              }
+            }
+          }
+        }
+      },
+      "hiresDatasetData": {
+        "{{#each $['table'].getTableData() as row }}": {
+          "{{#flatten}}": {
+            "something": {
+              "{{#each row.filter(x => !!x.value) as item }}": {
+                "{{item.name}}": {
+                  "{{ #if (item.type === 'Text') }}": {
+                    "text": "{{item.value}}"
+                  },
+                  "{{ #elseif (item.type === 'InString') }}": {
+                    "text": "{{item.value}}"
+                  },
+                  "{{ #elseif (item.type === 'BarcodePlaceholder' || item.type === 'ImagePlaceholder')}}": {
+                    "barcodeData": {
+                      "{{ #if (item.barcodeSubType === 'Url') }}": {
+                        "url": "{{item.value}}"
+                      },
+                      "{{ #elseif (item.barcodeSubType === 'Phone') }}": {
+                        "phone": "{{item.value}}"
+                      },
+                      "{{ #else }}": {
+                        "barcodeValue": "{{item.value}}"
+                      }
+                    }
+                  },
+                  "{{ #elseif (item.type === 'ImagePlaceholder')}}": {
+                    "image": "{{item.value}}"
+                  }
+                }
+              }
+            },
+            "placeholders": {
+              "{{#flatten}}": {
+                "something": {
+                  "{{#each $['table'].getSelectedRowData().filter(x => !!x.value && x.type === 'InString') as item }}": {
+                    "{{item.name}}": "{{item.value}}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "widgets": [
+      {
+        "name": "foldersRequest",
+        "type": "ajax",
+        "params": {
+          "autoCompile": true,
+          "url": "{{ settings.customersCanvasBaseUrl + vars.publicFoldersUrl + vars.backgroundFolder }}",
+          "method": "GET",
+          "lock": "preview",
+          "responseType": "json",
+          "onSuccess": "{{ #function $['filesRequest'].compile()}}"
+        }
+      },
+      {
+        "name": "filesRequest",
+        "type": "ajax",
+        "params": {
+          "{{ #if $['foldersRequest'].response }}": {
+            "{{ #with $['foldersRequest'].response[0] as folder }}": {
+              "autoCompile": false,
+              "url": "{{ settings.customersCanvasBaseUrl + vars.folderFilesUrl + folder.id}}",
+              "method": "GET",
+              "lock": "preview",
+              "responseType": "json"
+            }
+          }
+        }
+      },
+      {
+        "name": "options",
+        "type": "group",
+        "params": {
+          "type": "noncollapsible",
+          "tabs": [
+            {
+              "widgets": [
+                {
+                  "type": "gallery",
+                  "name": "backgrounds",
+                  "title": "Background",
+                  "params": {
+                    "showTitle": true,
+                    "forceSelection": true,
+                    "items": {
+                      "{{ #if $['filesRequest'].response }}": {
+                        "{{ #each $['filesRequest'].response as imageItem }}": {
+                          "name": "{{ imageItem.name.split('.')[0] }}",
+                          "title": "{{ imageItem.name.split('.')[0] }}",
+                          "previewUrl": "{{ settings.customersCanvasBaseUrl + vars.fileThumbnailUrl + imageItem.storageId }}",
+                          "data": {
+                            "storageId": "{{ imageItem.storageId }}",
+                            "userInfo": "{{ imageItem.path }}"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "editor",
+        "type": "design-editor",
+        "params": {
+          "initial": {
+            "productDefinition": {
+              "surfaces": [
+                {
+                  "printAreas": [
+                    {
+                      "designFile": "demos/id-card/vdp/id-card-2",
+                      "safetyLines": [
+                        {
+                          "margin": 0,
+                          "name": "bleed",
+                          "color": "rgba(255,0,0,255)",
+                          "altColor": "rgba(255,255,255,0)",
+                          "stepPx": 5,
+                          "widthPx": 1
+                        },
+                        {
+                          "margin": 9,
+                          "borderRadius": 9,
+                          "name": "trim",
+                          "color": "rgba(0,255,0,255)",
+                          "altColor": "rgba(255,255,255,0)",
+                          "stepPx": 5,
+                          "widthPx": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "mockup": {
+                    "up": "demos/id-card/vdp/id-card-2"
+                  }
+                }
+              ]
+            },
+            "editorConfig": {
+              "defaultAssetSelectWidget": "AssetManager",
+              "assetSources": {
+                "Logo": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf",
+                    "svg",
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/advanced",
+                    "categories": [
+                      {
+                        "name": "logo"
+                      }
+                    ]
+                  }
+                },
+                "Clipart": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf",
+                    "svg",
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/vdp",
+                    "categories": [
+                      {
+                        "name": "clipart"
+                      }
+                    ]
+                  }
+                },
+                "Shapes": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf",
+                    "svg",
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/advanced",
+                    "categories": [
+                      {
+                        "name": "shapes"
+                      }
+                    ]
+                  }
+                },
+                "Backgrounds": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/vdp",
+                    "categories": [
+                      {
+                        "name": "backgrounds"
+                      }
+                    ]
+                  }
+                },
+                "My files": {
+                  "type": "PrivateSource",
+                  "allowedExtensions": [
+                    "pdf",
+                    "svg",
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ]
+                }
+              },
+              "alignToSafetyLineName": "trim",
+              "canvas": {
+                "shadowEnabled": false,
+                "color": "white"
+              },
+              "fontList": {
+                "appFonts": [
+                  "*"
+                ]
+              },
+              "initialMode": "Advanced",
+              "restoreProductOnReloadEnabled": false,
+              "widgets": {
+                "AssetManager": {
+                  "tabs": [
+                    {
+                      "name": "Clipart",
+                      "assetSourceInstance": "Clipart"
+                    },
+                    {
+                      "name": "Logo",
+                      "assetSourceInstance": "Logo"
+                    },
+                    {
+                      "name": "Shapes",
+                      "assetSourceInstance": "Shapes"
+                    },
+                    {
+                      "name": "Backgrounds",
+                      "assetSourceInstance": "Backgrounds"
+                    },
+                    {
+                      "name": "My Files",
+                      "assetSourceInstance": "My files"
+                    }
+                  ]
+                },
+                "TopToolbar": {
+                  "multiRowModeEnabled": true,
+                  "textEmphasisButtonsEnabled": false,
+                  "displayAlignButtonsAsDropdown": true,
+                  "displayZOrderButtonsAsDropdown": true,
+                  "alignButtonsEnabled": true,
+                  "revertButtonEnabled": false
+                },
+                "Toolbox": {
+                  "buttons": [
+                    {
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_CUSTOM_TEXT",
+                      "iconClass": "cc-icon-add-text",
+                      "buttons": [
+                        {
+                          "translationKey": "Toolbox.ADD_PERSON_NAME",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_PERSON_NAME",
+                          "iconClass": "cc-icon-add-text",
+                          "action": "BoundedText",
+                          "itemConfig": {
+                            "name": "Person Name",
+                            "text": "{{#escape Person Name}}",
+                            "height": 22,
+                            "width": 180,
+                            "alignment": "center",
+                            "verticalAlignment": "top",
+                            "overflowStrategy": "fitToWidth",
+                            "textShrinkMode": "size",
+                            "font": {
+                              "postScriptName": "Roboto-Bold",
+                              "size": 18
+                            },
+                            "location": {
+                              "x": "50%",
+                              "y": "53%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_POSITION",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_POSITION",
+                          "iconClass": "cc-icon-add-text",
+                          "action": "BoundedText",
+                          "itemConfig": {
+                            "name": "Position",
+                            "text": "{{#escape Position}}",
+                            "height": 16,
+                            "width": 100,
+                            "alignment": "center",
+                            "verticalAlignment": "top",
+                            "overflowStrategy": "fitToWidth",
+                            "textShrinkMode": "size",
+                            "font": {
+                              "postScriptName": "Roboto-Regular",
+                              "size": 14
+                            },
+                            "location": {
+                              "x": "50%",
+                              "y": "60%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_COMPANY",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_COMPANY",
+                          "iconClass": "cc-icon-add-text",
+                          "action": "BoundedText",
+                          "itemConfig": {
+                            "name": "Company Name",
+                            "text": "{{#escape Company Name}}",
+                            "height": 14,
+                            "width": 100,
+                            "alignment": "center",
+                            "verticalAlignment": "top",
+                            "overflowStrategy": "fitToWidth",
+                            "textShrinkMode": "size",
+                            "font": {
+                              "postScriptName": "Roboto-Regular",
+                              "size": 12
+                            },
+                            "location": {
+                              "x": "50%",
+                              "y": "66%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_STATUS",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_STATUS",
+                          "iconClass": "cc-icon-add-text",
+                          "action": "BoundedText",
+                          "itemConfig": {
+                            "name": "Status",
+                            "text": "{{#escape STATUS}}",
+                            "height": 24,
+                            "width": 100,
+                            "alignment": "center",
+                            "verticalAlignment": "top",
+                            "overflowStrategy": "fitToWidth",
+                            "textShrinkMode": "size",
+                            "font": {
+                              "postScriptName": "Roboto-Black",
+                              "size": 20
+                            },
+                            "location": {
+                              "x": "50%",
+                              "y": "75%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_DATE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_DATE",
+                          "iconClass": "cc-icon-add-text",
+                          "action": "BoundedText",
+                          "itemConfig": {
+                            "name": "Event Date",
+                            "text": "{{#escape Event Date}}",
+                            "height": 14,
+                            "width": 60,
+                            "alignment": "center",
+                            "verticalAlignment": "top",
+                            "overflowStrategy": "fitToWidth",
+                            "textShrinkMode": "size",
+                            "font": {
+                              "postScriptName": "Roboto-Regular",
+                              "size": 12
+                            },
+                            "location": {
+                              "x": "50%",
+                              "y": "82%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_CUSTOM_FIELD_1",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_CUSTOM_TEXT",
+                          "iconClass": "cc-icon-add-text",
+                          "action": "BoundedText",
+                          "itemConfig": {
+                            "name": "Custom Text",
+                            "text": "{{#escape Custom text}}",
+                            "height": 20,
+                            "width": 100,
+                            "alignment": "center",
+                            "verticalAlignment": "center",
+                            "overflowStrategy": "fitToWidth",
+                            "textShrinkMode": "size",
+                            "font": {
+                              "postScriptName": "Roboto-Regular",
+                              "size": 16
+                            },
+                            "location": {
+                              "x": "50%",
+                              "y": "90%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "translationKey": "Toolbox.SHAPE",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_SHAPE",
+                      "iconClass": "cc-icon-add-shape",
+                      "buttons": [
+                        "Line",
+                        "Rectangle",
+                        "Ellipse",
+                        {
+                          "translationKey": "Toolbox.CUSTOM_SHAPE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_CUSTOM_SHAPE",
+                          "iconClass": "cc_icon_custom_shape",
+                          "action": "Image",
+                          "tabs": [
+                            "Shapes"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "translationKey": "Toolbox.ADD_IMAGE",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_IMAGE",
+                      "iconClass": "cc-icon-add-image",
+                      "action": "CustomPlaceholder",
+                      "itemConfig": {
+                        "name": "CustomPlaceholder",
+                        "shapePermissions": {
+                          "allowChangeBorderColor": true,
+                          "allowChangeBorderWidth": true
+                        },
+                        "itemPermissions": {
+                          "allowZOrderChange": true
+                        },
+                        "placeholderPermissions": {
+                          "allowEditContent": true,
+                          "showHandleButton": true
+                        },
+                        "contentPermissions": {
+                          "imagePermissions": {
+                            "allowChangeImage": false,
+                            "allowEditImage": false
+                          }
+                        },
+                        "contentImageUrl": "https://h2.customerscanvas.com/online-demo/proxywebapi/static/images/multistep/bg.png",
+                        "fillColor": "#eee",
+                        "contentResizeMode": "fill",
+                        "isCoverMode": false,
+                        "allowedSubfolder": "/demo",
+                        "allowedTabs": [
+                          "User"
+                        ],
+                        "isStubContent": true,
+                        "isVariable": true,
+                        "width": 100,
+                        "height": 250,
+                        "location": {
+                          "x": "50%",
+                          "y": "30%",
+                          "originX": "center",
+                          "originY": "center"
+                        }
+                      }
+                    },
+                    {
+                      "translationKey": "Toolbox.CLIPART",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_CLIPART",
+                      "iconClass": "cc_icon_clipart",
+                      "action": "Image",
+                      "itemConfig": {
+                        "name": "Image"
+                      },
+                      "tabs": [
+                        "Logo",
+                        "Clipart",
+                        "My Files"
+                      ]
+                    },
+                    {
+                      "translationKey": "Toolbox.ADD_QR_CODE",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_QR_CODE",
+                      "iconClass": "fa fa-qrcode",
+                      "buttons": [
+                        {
+                          "translationKey": "Toolbox.ADD_QR_CODE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_QR_CODE",
+                          "iconClass": "fa fa-qrcode",
+                          "action": "customplaceholder",
+                          "itemConfig": {
+                            "name": "QR Code",
+                            "placeholderPermissions": {
+                              "allowEditContent": false,
+                              "showSelectButton": false,
+                              "showHandleButton": false
+                            },
+                            "contentPermissions": {
+                              "barcodePermissions": {
+                                "allowChangeBarcodeType": false
+                              }
+                            },
+                            "itemPermissions": {
+                              "itemToolbarPermissions": {
+                                "showEditButton": false
+                              }
+                            },
+                            "contentResizeMode": "fill",
+                            "isCoverMode": true,
+                            "barcodeContent": {
+                              "barcodeFormat": "QR_CODE",
+                              "barcodeSubType": "Url"
+                            },
+                            "isStubContent": false,
+                            "isVariable": true,
+                            "width": 80,
+                            "height": 80,
+                            "location": {
+                              "x": "50%",
+                              "y": "82%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_EAN8_CODE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_EAN_CODE",
+                          "iconClass": "fa fa-barcode",
+                          "action": "customplaceholder",
+                          "itemConfig": {
+                            "name": "Barcode",
+                            "placeholderPermissions": {
+                              "allowEditContent": false,
+                              "showSelectButton": false,
+                              "showHandleButton": false
+                            },
+                            "contentPermissions": {
+                              "barcodePermissions": {
+                                "allowChangeBarcodeType": false
+                              }
+                            },
+                            "itemPermissions": {
+                              "itemToolbarPermissions": {
+                                "showEditButton": false
+                              }
+                            },
+                            "contentResizeMode": "fit",
+                            "isCoverMode": true,
+                            "barcodeContent": {
+                              "barcodeFormat": "EAN_8"
+                            },
+                            "isStubContent": true,
+                            "isVariable": true,
+                            "width": 150,
+                            "height": 40,
+                            "location": {
+                              "x": "50%",
+                              "y": "87%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_EAN13_CODE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_EAN_CODE",
+                          "iconClass": "fa fa-barcode",
+                          "action": "customplaceholder",
+                          "itemConfig": {
+                            "name": "Barcode",
+                            "placeholderPermissions": {
+                              "allowEditContent": false,
+                              "showSelectButton": false,
+                              "showHandleButton": false
+                            },
+                            "contentPermissions": {
+                              "barcodePermissions": {
+                                "allowChangeBarcodeType": false
+                              }
+                            },
+                            "itemPermissions": {
+                              "itemToolbarPermissions": {
+                                "showEditButton": false
+                              }
+                            },
+                            "contentResizeMode": "fit",
+                            "isCoverMode": true,
+                            "barcodeContent": {
+                              "barcodeFormat": "EAN_13"
+                            },
+                            "isStubContent": true,
+                            "isVariable": true,
+                            "width": 150,
+                            "height": 40,
+                            "location": {
+                              "x": "50%",
+                              "y": "87%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "linearBarcodeButtonEnabled": false,
+                  "richTextButtonEnabled": false
+                },
+                "ObjectInspector": {
+                  "toggleEnabled": true,
+                  "position": "Right",
+                  "isHidden": true,
+                  "bgItemEnabled": false,
+                  "variableItemsEnabled": false
+                },
+                "GalleryDialog": {
+                  "publicFolderName": "",
+                  "downloadPsdAsImage": false,
+                  "tabs": [
+                    {
+                      "name": "Shapes",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\shapes",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "Backgrounds",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\background",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "Logo",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\logo",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "Clipart",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\clipart",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "My Files",
+                      "type": "user",
+                      "translationKey": "GalleryDialog.TAB_USER",
+                      "canEdit": true,
+                      "canUpload": true,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    }
+                  ]
+                },
+                "BottomToolbar": {
+                  "fullWindowButtonEnabled": false
+                },
+                "FinishButton": {
+                  "mode": "Disabled"
+                }
+              }
+            }
+          },
+          "setBackground": {
+            "{{#if $['backgrounds']._}}": {
+              "url": "{{ $['backgrounds']._.data.userInfo }}"
+            },
+            "{{#else}}": {}
+          }
+        }
+      },
+      {
+        "name": "image",
+        "type": "image-carousel",
+        "params": {
+          "images": [
+            {
+              "url": "{{ $['editor'].proofImageUrls[0][0] }}"
+            }
+          ]
+        }
+      },
+      {
+        "name": "table",
+        "type": "datasheet",
+        "params": {
+          "data": "{{ $['editor'].variableData }}",
+          "onRowChange": [
+            "{{ #function $['editor'].getProofImages(800,800, false, false, false, 1000,1000, { itemsData: main.varManager.calculate('itemsData') } ) }}"
+          ],
+          "onCellTextChange": [
+            "{{ #function $['editor'].getProofImages(800,800, false, false, false, 1000,1000, { itemsData: main.varManager.calculate('itemsData') } ) }}"
+          ]
+        }
+      },
+      {
+        "name": "finish-button",
+        "type": "finish-button",
+        "params": {
+          "onClick": [
+            "{{ #asyncFunction await $['editor'].getHiResImages(800,800, null, false, null, { dataSet: {'surfacesData':[{'surfaceBinding':{'surfaceIndexes':[0]},'iterateOverSurfacesFirst':false,'data': main.varManager.calculate('hiresDatasetData')} ]} }) }}",
+            "{{ #function $['order'].widgetUpdated }}"
+          ]
+        }
+      },
+      {
+        "name": "order",
+        "type": "order",
+        "params": {
+          "images": "{{ $['editor'].proofImageUrls.map(item=>item[0]) }}",
+          "downloadUrls": "{{ $['editor'].hiResUrls }}",
+          "data": {
+            "stateId": "{{ $['editor'].stateId }}"
+          }
+        }
+      }
+    ],
+    "steps": [
+      {
+        "name": "Design",
+        "title": "Design",
+        "description": "Modify the design of your card. Add variable text by surrounding them with {{ and }} characters.",
+        "mainPanel": {
+          "name": "editor"
+        },
+        "toolPanel": {
+          "name": "options"
+        }
+      },
+      {
+        "name": "Data",
+        "title": "Data",
+        "description": "Fill in the table or upload an Excel file. If you need a sample Excel file to fill it in, use the Get Templates button.",
+        "onActivate": [
+          "{{ #function $['editor'].getVariableData() }}"
+        ],
+        "mainPanel": {
+          "name": "image"
+        },
+        "bottomPanel": {
+          "name": "table",
+          "height": "30%"
+        }
+      }
+    ]
+  }

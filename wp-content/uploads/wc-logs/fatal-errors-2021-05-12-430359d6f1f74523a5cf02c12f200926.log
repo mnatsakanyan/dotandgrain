@@ -1,0 +1,49 @@
+2021-05-12T06:02:45+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_form_field() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:70
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 70
+
+2021-05-12T06:04:46+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_form_field() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:70
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 70
+
+2021-05-12T06:06:47+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_form_field() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:70
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 70
+
+2021-05-12T06:06:49+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_form_field() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:70
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-blog-header.php(13): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\index.php(17): require('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 70
+
+2021-05-12T06:06:50+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_form_field() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:70
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-blog-header.php(13): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\index.php(17): require('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 70
+
+2021-05-12T06:08:28+00:00 CRITICAL Cannot redeclare misha_select_field() (previously declared in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-billing.php:76) in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\woocommerce\checkout\form-shipping.php on line 158
+

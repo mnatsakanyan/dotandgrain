@@ -1,0 +1,2 @@
+2021-04-30T15:28:18+00:00 CRITICAL Interface 'Automattic\WooCommerce\Blocks\Payments\PaymentMethodTypeInterface' not found in W:\domains\dotandgrain\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Payments\Integrations\AbstractPaymentMethodType.php on line 11
+

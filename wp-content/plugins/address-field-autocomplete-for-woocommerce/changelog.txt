@@ -1,0 +1,12 @@
+*** Address Field Autocomplete For WooCommerce ***
+
+2021-04-28 - version 1.0.1
+* ADDED - Option to disable map from frontend.
+* ADDED - Map in shipping address fields. *
+* IMPROVEMENT - Compatible with Astra Theme.
+* IMPROVEMENT - Remove warning & notices.
+
+2020-08-12 - version 1.0.0
+* Initial release.
+
+

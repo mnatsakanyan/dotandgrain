@@ -1,0 +1,40 @@
+2021-05-14T06:02:15+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Query as array in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:95
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-blog-header.php(13): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\index.php(17): require('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 95
+
+2021-05-14T06:02:16+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Query as array in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:95
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-blog-header.php(13): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\index.php(17): require('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 95
+
+2021-05-14T06:04:13+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Query as array in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:95
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-blog-header.php(13): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\index.php(17): require('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 95
+
+2021-05-14T06:04:14+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Query as array in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:95
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-blog-header.php(13): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\index.php(17): require('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 95
+

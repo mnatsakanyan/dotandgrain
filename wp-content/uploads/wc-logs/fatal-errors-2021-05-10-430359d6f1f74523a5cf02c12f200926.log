@@ -1,0 +1,89 @@
+2021-05-10T12:57:09+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 49
+
+2021-05-10T12:57:28+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 49
+
+2021-05-10T12:58:17+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 49
+
+2021-05-10T14:28:19+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:21+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:33+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:37+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:38+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin.php(34): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\wp-admin\edit.php(10): require_once('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:39+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-blog-header.php(13): require_once('W:\\domains\\dota...')
+#4 W:\domains\dotandgrain\index.php(17): require('W:\\domains\\dota...')
+#5 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:49+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:58+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+
+2021-05-10T14:28:59+00:00 CRITICAL Uncaught Error: Call to undefined function page_link() in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:101
+Stack trace:
+#0 W:\domains\dotandgrain\wp-settings.php(528): include()
+#1 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#2 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#3 W:\domains\dotandgrain\wp-admin\admin-ajax.php(22): require_once('W:\\domains\\dota...')
+#4 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 101
+

@@ -1,0 +1,174 @@
+{
+    "en": {
+        "uploader": {
+            "text": "Drag and drop your files here",
+            "uploading": "Uploading...",
+            "processing": "Processing ...",
+            "cancel": "Cancel",
+            "errorTitle": "Upload Error",
+            "error": {
+                "types": "Unsupported file format.",
+                "upload": "Ooops! Something went wrong.",
+                "process": "Preflight Tool can't process your file."
+            },
+            "errorButton": "Try Again"
+        },
+        "topToolbar": {
+            "uploadButton": "Upload file",
+            "fillToBleed": "Fill to Bleed",
+            "fillToTrim": "Fill to Trim",
+            "fitToBleed": "Fit to Bleed",
+            "fitToTrim": "Fit to Trim",
+            "rotateCanvas": "Rotate Canvas",
+            "centerArtwork": "Center Artwork",
+            "keepAspectRatio": "Keep aspect ratio",
+            "reset": "Reset",
+            "download": "Download PDF",
+            "applyToAll": "Apply to all pages",
+            "rotateImage": "Rotate image"
+        },
+        "leftToolbar": {
+            "deletePage": {
+                "deleteTitle": "Confirm delete",
+                "deleteMessage": "Are you sure you want to delete this page?",
+                "deleteCancel": "Cancel",
+                "delete": "Delete"
+            }
+        },
+        "rightToolbar": {
+            "info": {
+                "bleed": "Bleed ({{WIDTH}}{{SYMBOL}} x {{HEIGHT}}{{SYMBOL}})",
+                "productSize": "Product size ({{WIDTH}}{{SYMBOL}} x {{HEIGHT}}{{SYMBOL}})",
+                "bleedAreaText": "This area will be trimmed. Make sure all background graphics cover this area.",
+                "productSizeText": "This is the final size your artwork will be trimmed to.",
+                "rules": {
+                    "important": "Important:",
+                    "text": "Your artwork must be in {{COLORSPACE}} color space and its resolution should be at least {{DPI}} dpi."
+                }
+            },
+            "report": {
+                "title": "Report",
+                "noErrors": "No errors",
+                "errors": "Errors",
+                "warnings": "Warnings",
+                "page": "Page",
+                "fix": "Fix",
+                "messages": {
+                    "wrongColorSpace": "Bad color space - {{COLORSPACE}}",
+                    "lowResolution": "Low resolution - {{DPI}} dpi",
+                    "notFillTrimbox": "The design does not fill the entire TrimBox",
+                    "nomarginsBleedbox": "The design does not fill the entire BleedBox",
+                    "notInsideBleedbox": "The design does not fit the BleedBox",
+                    "safetyboxes": "Required page boxes are not defined or do not match - {{BOXES}}",
+                    "spotcolors": "Used unallowed spot colors - {{SPOTCOLORS}}",
+                    "sameorientation": "The page has a different orientation than most pages",
+                    "forbiddenfonts": "These fonts are forbidden - {{FONTS}}",
+                    "allowedfonts": "These fonts are not allowed - {{FONTS}}",
+                    "fonttypes": "These font types are not allowed - {{FONTTYPES}}",
+                    "minfontsize": "These text size values are less than allowed - {{FONTSIZES}}",
+                    "textascurves": "Text is not converted to curves",
+                    "embeddedfonts": "These fonts are not embedded in document - {{FONTS}}"
+                }
+            }
+        },
+        "preloader": {
+            "wait": "Please, wait..."
+        },
+        "main": {
+            "pageNamePrefix": "Page",
+            "closeErrorButton": "Close",
+            "errors": {
+                "failedCheck": "Failed to get information about document",
+                "failedFixColorSpace": "Failed to change color space",
+                "failedFixSpotColors": "Failed to convert SPOT colors",
+                "failedRestoreState": "Failed to restore product from state file"
+            }
+        }
+    },
+    "nl": {
+        "uploader": {
+            "text": "Sleep hier uw bestanden heen",
+            "uploading": "Bezig met uploaden...",
+            "processing": "Verwerken...",
+            "cancel": "Annuleren",
+            "errorTitle": "Fout bij het uploaden",
+            "error": {
+                "types": "Bestandstype wordt niet ondersteund.",
+                "upload": "Oeps! Er is iets fout gegaan.",
+                "process": "Preflight Tool kan uw bestand niet verwerken."
+            },
+            "errorButton": "Probeer opnieuw"
+        },
+        "topToolbar": {
+            "uploadButton": "Bestand uploaden",
+            "fillToBleed": "Vul tot lijn bloeden",
+            "fillToTrim": "Vullen tot snijlijn",
+            "fitToBleed": "Schalen naar afloop-maat",
+            "fitToTrim": "Snijden naar snij-maat",
+            "rotateCanvas": "Draai het Canvas",
+            "centerArtwork": "Centreer illustratie",
+            "keepAspectRatio": "Behoud hoogte-breedteverhouding",
+            "reset": "Herstellen",
+            "download": "PDF downloaden",
+            "applyToAll": "Toepassen op alle pagina's",
+            "rotateImage": "Afbeelding draaien"
+        },
+        "leftToolbar": {
+            "deletePage": {
+                "deleteTitle": "Verwijderen bevestigen",
+                "deleteMessage": "Weet u zeker dat u deze pagina wilt verwijderen?",
+                "deleteCancel": "Annuleren",
+                "delete": "Verwijderen"
+            }
+        },
+        "rightToolbar": {
+            "info": {
+                "bleed": "Bruto-maat ({{WIDTH}}{{SYMBOL}} x {{HEIGHT}}{{SYMBOL}})",
+                "productSize": "Eindformaat ({{WIDTH}}{{SYMBOL}} x {{HEIGHT}}{{SYMBOL}})",
+                "bleedAreaText": "Overtollige randen worden afgesneden.",
+                "productSizeText": "Dit is het uiteindelijke formaat van het product.",
+                "rules": {
+                    "important": "Belangrijk:",
+                    "text": "Uw illustratie moet in kleurruimte {{COLORSPACE}} en de resolutie moet minimaal {{DPI}} dpi zijn."
+                }
+            },
+            "report": {
+                "title": "Rapport",
+                "noErrors": "Geen fouten",
+                "errors": "Fouten",
+                "warnings": "Waarschuwingen",
+                "page": "Pagina",
+                "fix": "Repareer",
+                "messages": {
+                    "wrongColorSpace": "Verkeerde kleurruimte - {{COLORSPACE}}",
+                    "lowResolution": "Lage resolutie - {{DPI}} dpi",
+                    "notFillTrimbox": "Het ontwerp vult de gehele SnijBox niet",
+                    "nomarginsBleedbox": "Het ontwerp vult niet de hele BleedBox",
+                    "notInsideBleedbox": "Het ontwerp vult de gehele AfloopBox niet",
+                    "safetyboxes": "Vereiste paginaboxen zijn niet aangegeven of komen niet overeen - {{BOXES}}",
+                    "spotcolors": "Niet-ondersteunde steunkleuren gebruikt - {{SPOTCOLORS}}",
+                    "sameorientation": "De pagina heeft een afwijkende afdrukstand",
+                    "forbiddenfonts": "Deze lettertypes worden niet toegestaan - {{FONTS}}",
+                    "allowedfonts": "Deze lettertypes worden niet toegestaan - {{FONTS}}",
+                    "fonttypes": "Deze lettertypes worden niet toegestaan - {{FONTTYPES}}",
+                    "minfontsize": "Deze tekstrgroottes zijn lager dan toegestaan - {{FONTSIZES}}",
+                    "textascurves": "Tekst is niet omgezet naar curves",
+                    "embeddedfonts": "Deze lettertypes zijn niet ingesloten in dit document - {{FONTS}}"
+                }
+            }
+        },
+        "preloader": {
+            "wait": "Even geduld, alstublieft...."
+        },
+        "main": {
+            "pageNamePrefix": "Bladzijde",
+            "closeErrorButton": "Sluiten",
+            "errors": {
+                "failedCheck": "Kan informatie over document niet ophalen",
+                "failedFixColorSpace": "Kleurruimte wijzigen is mislukt",
+                "failedFixSpotColors": "Kan steunkleuren niet herstellen",
+                "failedRestoreState": "Kan product niet herstellen vanuit statusbestand"
+            }
+        }
+    }
+}

@@ -1,0 +1,870 @@
+{
+    "showSteps": true,
+    "language": "en",
+    "previewSize": 750,
+    "vars": {
+      "vdpData": {
+        "{{ #each $['table'].getTableData() as row }}": {
+          "{{ #each row as item }}": {
+            "{{ #if (item.type === 'Text') }}": {
+              "placeholders": {
+                "{{ item.name }}": "{{ item.value }}"
+              }
+            },
+            "{{ #elseif (item.type === 'InString') }}": {
+              "placeholders": {
+                "{{ item.name }}": "{{ item.value }}"
+              }
+            },
+            "{{ #elseif (item.type === 'ImagePlaceholder')}}": {
+              "{{ item.name }}": {
+                "image": "{{ item.placeholderContent.originalUrl.indexOf('x-cctoken') !== -1 ? item.placeholderContent.originalUrl : item.placeholderContent.originalUrl + '?x-cctoken=' + $['editor'].token }}",
+                "contentResizeMode": "{{  item.placeholderContent.contentResizeMode }}",
+                "contentTransform": {
+                  "angle": "{{ item.placeholderContent.contentTransform.angle }}",
+                  "scaleX": "{{ item.placeholderContent.contentTransform.scaleX }}",
+                  "scaleY": "{{ item.placeholderContent.contentTransform.scaleY }}",
+                  "translateX": "{{ item.placeholderContent.contentTransform.translateX }}",
+                  "translateY": "{{ item.placeholderContent.contentTransform.translateY }}"
+                },
+                "ignoreExistingTransform": true
+              }
+            },
+            "{{ #elseif (item.type === 'BarcodePlaceholder')}}": {
+              "barcodeData": {
+                "{{ #if (item.barcodeSubType === 'Url') }}": {
+                  "barcodeFormat": "{{ item.barcodeFormat }}",
+                  "BarcodeSubType": "Url",
+                  "url": "{{item.value}}"
+                },
+                "{{ #elseif (item.barcodeSubType === 'Phone') }}": {
+                  "BarcodeFormat": "{{ item.barcodeFormat }}",
+                  "BarcodeSubType": "Phone",
+                  "phone": "{{item.value}}"
+                },
+                "{{ #else }}": {
+                  "barcodeFormat": "{{ item.barcodeFormat }}",
+                  "barcodeValue": "{{item.value}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "widgets": [
+      {
+        "name": "set-vdp-data",
+        "type": "ajax",
+        "params": {
+          "autoCompile": false,
+          "method": "post",
+          "responseType": "json",
+          "enabled": "{{ $['editor'].stateId != '' }}",
+          "url": "{{ settings.customersCanvasBaseUrl + '/api/hires/generatehires'}}",
+          "request": {
+            "dataSet": {
+              "surfacesData": [
+                {
+                  "surfaceBinding": {
+                    "surfaceIndexes": [
+                      0
+                    ]
+                  },
+                  "data": "{{ vars.vdpData.map(x => {return x.reduce((obj1, obj2) => {var temp = Object.assign({}, obj1, obj2);Object.keys(temp).forEach(key => { temp[key] = (typeof temp[key] === 'object') ? Object.assign(temp[key], obj1[key], obj2[key]) : temp[key]; }); return temp;}, {});}); }}"
+                }
+              ]
+            },
+            "productDefinitions": [
+              "{{ $['editor'].stateId }}"
+            ],
+            "userId": "{{ $['editor'].userId }}"
+          }
+        }
+      },
+      {
+        "name": "editor",
+        "type": "design-editor",
+        "params": {
+          "initial": {
+            "productDefinition": {
+              "surfaces": [
+                {
+                  "printAreas": [
+                    {
+                      "designFile": "demos/id-card/vdp/id-card-2"
+                    }
+                  ],
+                  "mockup": {
+                    "up": "demos/id-card/vdp/id-card-2"
+                  }
+                }
+              ]
+            },
+            "editorConfig": {
+              "defaultItemsConfig": {
+                "image": {
+                  "imagePermissions": {
+                    "allowChangeImage": false,
+                    "allowEditImage": false
+                  },
+                  "manipulationPermissions": {
+                    "allowDragAndDrop": false,
+                    "resizeGrips": {}
+                  }
+                },
+                "placeholder": {
+                  "manipulationPermissions": {
+                    "allowDragAndDrop": false,
+                    "resizeGrips": {}
+                  }
+                }
+              },
+              "defaultAssetSelectWidget": "AssetManager",
+              "assetSources": {
+                "Logo": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf",
+                    "svg",
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/advanced",
+                    "categories": [
+                      {
+                        "name": "logo"
+                      }
+                    ]
+                  }
+                },
+                "Clipart": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf",
+                    "svg",
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/vdp",
+                    "categories": [
+                      {
+                        "name": "clipart"
+                      }
+                    ]
+                  }
+                },
+                "Shapes": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf",
+                    "svg",
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/advanced",
+                    "categories": [
+                      {
+                        "name": "shapes"
+                      }
+                    ]
+                  }
+                },
+                "Backgrounds": {
+                  "type": "PublicSource",
+                  "allowedExtensions": [
+                    "pdf"
+                  ],
+                  "rootCategory": {
+                    "name": "demos/id-card/vdp",
+                    "categories": [
+                      {
+                        "name": "backgrounds"
+                      }
+                    ]
+                  }
+                },
+                "My files": {
+                  "type": "PrivateSource",
+                  "allowedExtensions": [
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ]
+                }
+              },
+              "alignToSafetyLineName": "trim",
+              "canvas": {
+                "shadowEnabled": false,
+                "color": "white"
+              },
+              "fontList": {
+                "appFonts": [
+                  "*"
+                ]
+              },
+              "initialMode": "Advanced",
+              "restoreProductOnReloadEnabled": false,
+              "widgets": {
+                "AssetManager": {
+                  "tabs": [
+                    {
+                      "name": "Clipart",
+                      "assetSourceInstance": "Clipart"
+                    },
+                    {
+                      "name": "Logo",
+                      "assetSourceInstance": "Logo"
+                    },
+                    {
+                      "name": "Shapes",
+                      "assetSourceInstance": "Shapes"
+                    },
+                    {
+                      "name": "Backgrounds",
+                      "assetSourceInstance": "Backgrounds"
+                    },
+                    {
+                      "name": "My Files",
+                      "assetSourceInstance": "My files"
+                    }
+                  ]
+                },
+                "TopToolbar": {
+                  "multiRowModeEnabled": true,
+                  "textEmphasisButtonsEnabled": false,
+                  "displayAlignButtonsAsDropdown": true,
+                  "displayZOrderButtonsAsDropdown": true,
+                  "alignButtonsEnabled": true,
+                  "revertButtonEnabled": false
+                },
+                "Toolbox": {
+                  "buttons": [
+                    {
+                      "translationKey": "Toolbox.ADD_TEXT",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_TEXT",
+                      "iconClass": "cc-icon-add-text",
+                      "action": "BoundedText",
+                      "itemConfig": {
+                        "name": "Your text",
+                        "text": "{{#escape Your text}}",
+                        "height": 22,
+                        "width": 180,
+                        "alignment": "center",
+                        "verticalAlignment": "top",
+                        "overflowStrategy": "fitToWidth",
+                        "textShrinkMode": "size",
+                        "font": {
+                          "postScriptName": "Roboto-Regular",
+                          "size": 18
+                        },
+                        "location": {
+                          "x": "50%",
+                          "y": "53%",
+                          "originX": "center",
+                          "originY": "center"
+                        }
+                      }
+                    },
+                    {
+                      "translationKey": "Toolbox.SHAPE",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_SHAPE",
+                      "iconClass": "cc-icon-add-shape",
+                      "buttons": [
+                        "Line",
+                        "Rectangle",
+                        "Ellipse",
+                        {
+                          "translationKey": "Toolbox.CUSTOM_SHAPE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_CUSTOM_SHAPE",
+                          "iconClass": "cc_icon_custom_shape",
+                          "action": "Image",
+                          "tabs": [
+                            "Shapes"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "translationKey": "Toolbox.ADD_IMAGE",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_IMAGE",
+                      "iconClass": "cc-icon-add-image",
+                      "action": "CustomPlaceholder",
+                      "itemConfig": {
+                        "name": "CustomPlaceholder",
+                        "shapePermissions": {
+                          "allowChangeBorderColor": true,
+                          "allowChangeBorderWidth": true
+                        },
+                        "itemPermissions": {
+                          "allowZOrderChange": true
+                        },
+                        "placeholderPermissions": {
+                          "allowEditContent": true,
+                          "showHandleButton": true
+                        },
+                        "contentPermissions": {
+                          "imagePermissions": {
+                            "allowChangeImage": false,
+                            "allowEditImage": false
+                          }
+                        },
+                        "manipulationPermissions": {
+                          "allowMoveHorizontal": false,
+                          "allowMoveVertical": false,
+                          "allowRotate": false
+                        },
+                        "contentImageUrl": "https://h2.customerscanvas.com/online-demo/bg.png",
+                        "fillColor": "#eee",
+                        "contentResizeMode": "fill",
+                        "isCoverMode": false,
+                        "allowedSubfolder": "/demo",
+                        "allowedTabs": [
+                          "User"
+                        ],
+                        "isStubContent": true,
+                        "isVariable": true,
+                        "width": 100,
+                        "height": 250,
+                        "location": {
+                          "x": "50%",
+                          "y": "30%",
+                          "originX": "center",
+                          "originY": "center"
+                        }
+                      }
+                    },
+                    {
+                      "translationKey": "Toolbox.CLIPART",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_CLIPART",
+                      "iconClass": "cc_icon_clipart",
+                      "action": "Image",
+                      "tabs": [
+                        "Logo",
+                        "Clipart",
+                        "My Files"
+                      ]
+                    },
+                    {
+                      "translationKey": "Toolbox.ADD_QR_CODE",
+                      "translationKeyTitle": "Toolbox.TITLE_ADD_QR_CODE",
+                      "iconClass": "cc-icon-linear-code",
+                      "buttons": [
+                        {
+                          "translationKey": "Toolbox.ADD_QR_CODE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_QR_CODE",
+                          "iconClass": "cc-icon-qr-code",
+                          "action": "customplaceholder",
+                          "itemConfig": {
+                            "name": "QR Code",
+                            "placeholderPermissions": {
+                              "allowEditContent": false,
+                              "showSelectButton": false,
+                              "showHandleButton": false
+                            },
+                            "contentPermissions": {
+                              "barcodePermissions": {
+                                "allowChangeBarcodeType": false
+                              }
+                            },
+                            "itemPermissions": {
+                              "itemToolbarPermissions": {
+                                "showEditButton": false
+                              }
+                            },
+                            "contentResizeMode": "fill",
+                            "isCoverMode": true,
+                            "barcodeContent": {
+                              "barcodeFormat": "QR_CODE",
+                              "barcodeSubType": "Url"
+                            },
+                            "isStubContent": false,
+                            "isVariable": true,
+                            "width": 100,
+                            "height": 100,
+                            "location": {
+                              "x": "50%",
+                              "y": "50%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_EAN8_CODE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_EAN_CODE",
+                          "iconClass": "cc-icon-linear-code",
+                          "action": "customplaceholder",
+                          "itemConfig": {
+                            "name": "Barcode 8",
+                            "placeholderPermissions": {
+                              "allowEditContent": false,
+                              "showSelectButton": false,
+                              "showHandleButton": false
+                            },
+                            "contentPermissions": {
+                              "barcodePermissions": {
+                                "allowChangeBarcodeType": false
+                              }
+                            },
+                            "itemPermissions": {
+                              "itemToolbarPermissions": {
+                                "showEditButton": false
+                              }
+                            },
+                            "contentResizeMode": "fit",
+                            "isCoverMode": true,
+                            "barcodeContent": {
+                              "barcodeFormat": "EAN_8"
+                            },
+                            "isStubContent": true,
+                            "isVariable": true,
+                            "width": 100,
+                            "height": 50,
+                            "location": {
+                              "x": "50%",
+                              "y": "80%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        },
+                        {
+                          "translationKey": "Toolbox.ADD_EAN13_CODE",
+                          "translationKeyTitle": "Toolbox.TITLE_ADD_EAN_CODE",
+                          "iconClass": "cc-icon-linear-code",
+                          "action": "customplaceholder",
+                          "itemConfig": {
+                            "name": "Barcode 13",
+                            "placeholderPermissions": {
+                              "allowEditContent": false,
+                              "showSelectButton": false,
+                              "showHandleButton": false
+                            },
+                            "contentPermissions": {
+                              "barcodePermissions": {
+                                "allowChangeBarcodeType": false
+                              }
+                            },
+                            "itemPermissions": {
+                              "itemToolbarPermissions": {
+                                "showEditButton": false
+                              }
+                            },
+                            "contentResizeMode": "fit",
+                            "isCoverMode": true,
+                            "barcodeContent": {
+                              "barcodeFormat": "EAN_13"
+                            },
+                            "isStubContent": true,
+                            "isVariable": true,
+                            "width": 100,
+                            "height": 50,
+                            "location": {
+                              "x": "50%",
+                              "y": "80%",
+                              "originX": "center",
+                              "originY": "center"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "linearBarcodeButtonEnabled": false,
+                  "richTextButtonEnabled": false
+                },
+                "ObjectInspector": {
+                  "position": "Right",
+                  "isHidden": true,
+                  "bgItemEnabled": false,
+                  "variableItemsEnabled": false
+                },
+                "GalleryDialog": {
+                  "downloadPsdAsImage": false,
+                  "tabs": [
+                    {
+                      "name": "Shapes",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\shapes",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "Backgrounds",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\background",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "Logo",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\logo",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "Clipart",
+                      "type": "public",
+                      "subFolderName": "demos\\id-card\\advanced\\clipart",
+                      "canEdit": false,
+                      "categoriesEnabled": false,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    },
+                    {
+                      "name": "My Files",
+                      "type": "user",
+                      "translationKey": "GalleryDialog.TAB_USER",
+                      "canEdit": true,
+                      "canUpload": true,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    }
+                  ]
+                },
+                "FinishButton": {
+                  "mode": "Disabled"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "preview-canvas",
+        "type": "design-editor",
+        "params": {
+          "initial": {
+            "productDefinition": {
+                "surfaces": [
+                  {
+                    "printAreas": [
+                      {
+                        "designFile": "demos/id-card/vdp/id-card-2"
+                      }
+                    ],
+                    "mockup": {
+                      "up": "demos/id-card/vdp/id-card-2"
+                    }
+                  }
+                ]
+              },
+            "editorConfig": {
+              "defaultAssetSelectWidget": "AssetManager",
+              "assetSources": {
+                "My files": {
+                  "type": "PrivateSource",
+                  "allowedExtensions": [
+                    "jpg",
+                    "jpeg",
+                    "png"
+                  ]
+                }
+              },
+              "initialMode": "SimpleOnly",
+              "restoreProductOnReloadEnabled": false,
+              "canvasOnlyMode": true,
+              "canvas": {
+                "rulers": {
+                  "enabled": false
+                },
+                "shadowEnabled": false,
+                "color": "white"
+              },
+              "widgets": {
+                "AssetManager": {
+                  "tabs": [
+                    {
+                      "name": "My files",
+                      "assetSourceInstance": "My files",
+                      "iconClassName": "cc-icon-uploadable",
+                      "controls": {
+                        "toolbarEnabled": false
+                      }
+                    }
+                  ]
+                },
+                "TopToolbar": {
+                  "alignButtonsEnabled": true,
+                  "displayAlignButtonsAsDropdown": false,
+                  "displayCaptionInButtons": false,
+                  "historyButtonsEnabled": false,
+                  "deleteButtonEnabled": true,
+                  "revertButtonEnabled": false,
+                  "zOrderButtonsEnabled": false,
+                  "displayZOrderButtonsAsDropdown": false,
+                  "cloneButtonEnabled": false,
+                  "editTextButtonEnabled": false,
+                  "textVAlignmentButtonsEnabled": true,
+                  "textAlignmentButtonsEnabled": true,
+                  "textAllowChangeColumnCount": true,
+                  "textEmphasisButtonsEnabled": true,
+                  "textFontFamilyButtonEnabled": true,
+                  "textFontStyleButtonEnabled": true,
+                  "textFontSizeButtonEnabled": true,
+                  "textFontColorButtonEnabled": true,
+                  "textShadowButtonEnabled": true,
+                  "textStrokeButtonEnabled": true,
+                  "closeFontMenuOnClickEnabled": true,
+                  "opacitySliderEnabled": true,
+                  "textLeadingButtonEnabled": true,
+                  "textTrackingButtonEnabled": true,
+                  "multiRowModeEnabled": false,
+                  "borderColorButtonEnabled": true,
+                  "borderWidthButtonEnabled": true,
+                  "imageEditButtonEnabled": true,
+                  "imageSelectButtonEnabled": true,
+                  "placeholderEditButtonEnabled": true,
+                  "placeholderSelectButtonEnabled": true,
+                  "placeholderScaleButtonEnabled": true,
+                  "placeholderResetContentButtonEnabled": true,
+                  "fontPreviewSize": 17,
+                  "textStroke": {
+                    "max": 5,
+                    "min": 0.01,
+                    "step": 0.01
+                  },
+                  "textShadow": {
+                    "angle": {
+                      "max": 360,
+                      "min": 0,
+                      "step": 15
+                    },
+                    "distance": {
+                      "max": null,
+                      "min": 0,
+                      "step": 0.1
+                    },
+                    "size": {
+                      "max": null,
+                      "min": 0,
+                      "step": 0.1
+                    }
+                  },
+                  "fontSize": {
+                    "max": 100,
+                    "min": 4,
+                    "step": 0.5
+                  },
+                  "zOrder": {
+                    "zOrderLevelButtonsEnabled": true,
+                    "zOrderSendToButtonsEnabled": true
+                  }
+                },
+                "GalleryDialog": {
+                  "publicFolderName": "",
+                  "downloadPsdAsImage": false,
+                  "defaultTabName": "Shapes",
+                  "tabs": [
+                    {
+                      "name": "My Files",
+                      "type": "user",
+                      "translationKey": "GalleryDialog.TAB_USER",
+                      "canEdit": true,
+                      "canUpload": true,
+                      "actionMode": {
+                        "psd": "design",
+                        "svg": "shape"
+                      }
+                    }
+                  ]
+                },
+                "ObjectInspector": {
+                  "position": "Right",
+                  "isHidden": true,
+                  "bgItemEnabled": false,
+                  "variableItemsEnabled": false
+                },
+                "BottomToolbar": {
+                  "safetyLinesCheckboxEnabled": false,
+                  "gridCheckboxEnabled": false,
+                  "snapLinesCheckboxEnabled": false,
+                  "zoomValueEnabled": true,
+                  "zoomButtonsEnabled": true,
+                  "rotateButtonEnabled": false,
+                  "fullWindowButtonEnabled": true,
+                  "fullScreenButtonEnabled": true,
+                  "surfaceSwitchEnabled": true,
+                  "surfaceSwitch": {
+                    "enabled": true,
+                    "showThumbnails": true,
+                    "showSurfaceNames": false,
+                    "scrollPageButtonsEnabled": true,
+                    "toggleSurfaceButtonsEnabled": false,
+                    "firstAndLastButtonsEnabled": true,
+                    "specificForSurfaceCount": {}
+                  }
+                },
+                "FinishButton": {
+                  "mode": "Disabled"
+                }
+              }
+            }
+          },
+          "modifyItems": {
+            "items": {
+              "{{#flatten}}": {
+                "something": {
+                  "{{#each $['table'].getSelectedRowData() as item }}": {
+                    "{{item.name}}": {
+                      "{{ #if (item.type === 'ImagePlaceholder') }}": {
+                        "{{#merge }}": [
+                          "{{item}}",
+                          {
+                            "contentPermissions": {
+                              "imagePermissions": {
+                                "allowChangeImage": true,
+                                "allowEditImage": true
+                              }
+                            },
+                            "placeholderPermissions": {
+                              "showSelectButton": true,
+                              "showHandleButton": true,
+                              "allowEditContent": true
+                            },
+                            "locked": false,
+                            "force": true
+                          }
+                        ]
+                      },
+                      "{{ #else  }}": {
+                        "{{#merge }}": [
+                          "{{ item }}",
+                          {
+                            "text": "{{ item.value }}",
+                            "force": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "setSurfaces": {
+            "surfaces": [
+              {
+                "{{ #if $['editor'].stateId !== '' }}": {
+                  "stateId": "{{ $['editor'].stateId }}",
+                  "surface": 0
+                }
+              }
+            ],
+            "after": [
+              "modifyItems"
+            ]
+          },
+          "replaceInterpolationPlaceholders": true
+        }
+      },
+      {
+        "name": "table",
+        "type": "datasheet",
+        "params": {
+          "updateItem": "{{ $['preview-canvas'].modifiedItem }}",
+          "data": {
+            "{{#each $['editor'].variableData as variable }}": {
+              "name": "{{variable.name}}",
+              "value": "{{ !!variable.value ? variable.value : null}}",
+              "type": "{{variable.type}}",
+              "barcodeFormat": "{{!!variable.barcodeFormat ? variable.barcodeFormat : null}}",
+              "barcodeSubType": "{{!!variable.barcodeSubType ? variable.barcodeSubType : null}}",
+              "readonly": "{{ variable.type === 'ImagePlaceholder' }}"
+            }
+          }
+        }
+      },
+      {
+        "name": "instructions",
+        "type": "html",
+        "params": {
+          "template": [
+            {
+              "<>": "style",
+              "text": "#container {display:flex; flex-direction:column; height:100%;} .instruction {text-align: left; margin-bottom: 20px}"
+            },
+            {
+              "<>": "code",
+              "class": ".instruction",
+              "text": "{{'vdp -m online -s ' + $['set-vdp-data'].response[0].StateId + ' -u ' + $['editor'].userId }}"
+            },
+            {
+              "<>": "div",
+              "class": "instruction",
+              "html": "Currently, print-ready files rendering is available via our desktop app only. This video below shows the rendering process."
+            },
+            {
+              "<>": "iframe",
+              "style": "height:100%; width:100%",
+              "src": "https://www.youtube.com/embed/Qfxm8GWUPPw?autoplay=true",
+              "frameborder": "0",
+              "allow": "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+              "allowfullscreen": true
+            }
+          ]
+        }
+      }
+    ],
+    "steps": [
+      {
+        "name": "Design",
+        "title": "Design",
+        "description": "Modify the design of your card. Add variable text by surrounding them with {{ and }} characters.",
+        "mainPanel": {
+          "name": "editor"
+        }
+      },
+      {
+        "name": "Data",
+        "title": "Data",
+        "description": "Fill in the table or upload an Excel file. If you need a sample Excel file to fill it in, use the Get Templates button.",
+        "onActivate": [
+          "{{ #function $['editor'].saveProduct() }}",
+          "{{ #function $['editor'].getVariableData()}}"
+        ],
+        "mainPanel": {
+          "name": "preview-canvas"
+        },
+        "bottomPanel": {
+          "name": "table",
+          "height": "30%"
+        }
+      },
+      {
+        "name": "Instructions",
+        "title": "Instructions",
+        "description": "This step is for demo purposes only",
+        "mainPanel": {
+          "name": "instructions"
+        },
+        "onActivate": [
+          "{{ #function $['editor'].getToken() }}",
+          "{{ #function $['set-vdp-data'].compile() }}"
+        ]
+      }
+    ]
+  }
