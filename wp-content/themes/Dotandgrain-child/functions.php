@@ -92,11 +92,3 @@ function woocommerce_remove_product_from_cart(){
      }
 }
 
-
-add_action('woocommerce_mini_cart_contents', 'fm_woocommerce_before_mini_cart_contents');
-
-function fm_woocommerce_before_mini_cart_contents(){
-    global $woocommerce;
-    $items = $woocommerce->cart->get_cart();
-    var_dump($items);
-}
