@@ -78,17 +78,25 @@ add_action('template_redirect', 'woocommerce_remove_product_from_cart');
 function woocommerce_remove_product_from_cart(){
     global $woocommerce;
     $items = $woocommerce->cart->get_cart();
-     foreach ($items as $item => $values) {
-            if (get_the_ID() == 1073) {
-                if ($values['product_id'] != 1073) {
-                    WC()->cart->remove_cart_item($item);
+    $product_id = 1073;
+    if ( sizeof( $items ) > 0 ) {
+         foreach ($items as $item => $values) {
+                if (get_the_ID() == 1073) {
+                    if ($values['product_id'] != 1073) {
+                        WC()->cart->remove_cart_item($item);
+                        $woocommerce->cart->add_to_cart( $product_id );
+                    }
                 }
-            }
-            if (get_the_ID() == 985) {
-                if ($values['product_id'] == 1073) {
-                    WC()->cart->remove_cart_item($item);
+                if (get_the_ID() == 985) {
+                    if ($values['product_id'] == 1073) {
+                        WC()->cart->remove_cart_item($item);
+                    }
                 }
-            }
-     }
+         }
+     }elseif (get_the_ID() == $product_id ){
+        $woocommerce->cart->add_to_cart( $product_id );
+    }
 }
+
+
 

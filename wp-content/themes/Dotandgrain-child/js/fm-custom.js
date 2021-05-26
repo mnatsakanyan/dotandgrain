@@ -41,6 +41,7 @@
                 }
             }
         });
+        $('.product_simple_kit .single_add_to_cart_button').remove('disabled', true);
     });
 })(jQuery);
 

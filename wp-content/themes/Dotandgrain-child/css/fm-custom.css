@@ -519,7 +519,7 @@ blockquote:before {
 .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
     border-width:1px !important; ;
 }
-.product_simple_kit #billing_looking_field_field .woocommerce-input-wrapper, .product_simple_kit .cart-subtotal, .product_simple_kit .product-quantity, .product_simple_kit .woocommerce-shipping-totals.shipping,
+.product_simple_kit .cart-subtotal, .product_simple_kit .product-quantity, .product_simple_kit .woocommerce-shipping-totals.shipping,
 .product_simple_kit .woocommerce table.shop_table thead, .product_simple_kit .woocommerce table.shop_table .product-remove{
     display:none!important;
 }
@@ -593,4 +593,7 @@ body.woocommerce-checkout.woocommerce table.shop_table{
     line-height: normal!important;
     padding: 5px 0 !important;
     border-width: 2px !important;
+}
+.product_simple_kit .single_add_to_cart_button{
+    opacity: 1 !important;
 }

@@ -1,0 +1,468 @@
+2021-05-26T06:55:39+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T06:57:03+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T06:58:35+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:04:15+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:05:24+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:06:38+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:08:39+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:10:40+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:12:41+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:14:42+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:16:43+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:18:44+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:20:45+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:22:46+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:23:49+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:28:56+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:29:57+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:29:57+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:32:11+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:104
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 104
+
+2021-05-26T07:33:13+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:105
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 105
+
+2021-05-26T07:36:24+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:37:26+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:37:27+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:37:27+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:38:53+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:39:55+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:39:55+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:39:55+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:39:55+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:40:54+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:103
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 103
+
+2021-05-26T07:42:05+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:82
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 82
+
+2021-05-26T07:43:16+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:82
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 82
+
+2021-05-26T07:44:32+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:84
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 84
+
+2021-05-26T07:46:32+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:86
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 86
+
+2021-05-26T07:48:34+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:84
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 84
+
+2021-05-26T07:50:34+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:86
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 86
+
+2021-05-26T07:51:46+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:82
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 82
+
+2021-05-26T07:52:53+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:82
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 82
+
+2021-05-26T07:54:36+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php:82
+Stack trace:
+#0 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(292): add_product_to_cart('')
+#1 W:\domains\dotandgrain\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 W:\domains\dotandgrain\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 W:\domains\dotandgrain\wp-settings.php(560): do_action('init')
+#4 W:\domains\dotandgrain\wp-config.php(90): require_once('W:\\domains\\dota...')
+#5 W:\domains\dotandgrain\wp-load.php(37): require_once('W:\\domains\\dota...')
+#6 W:\domains\dotandgrain\wp-cron.php(44): require_once('W:\\domains\\dota...')
+#7 {main}
+  thrown in W:\domains\dotandgrain\wp-content\themes\Dotandgrain-child\functions.php on line 82
+
